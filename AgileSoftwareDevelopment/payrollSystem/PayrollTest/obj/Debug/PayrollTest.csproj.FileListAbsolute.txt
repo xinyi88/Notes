@@ -1,0 +1,15 @@
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\obj\Debug\PayrollTest.csprojResolveAssemblyReference.cache
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\PayrollTest.dll
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\PayrollTest.pdb
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\payrollSystem.exe
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\payrollSystem.pdb
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\payrollSystem.exe.config
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\obj\Debug\PayrollTest.dll
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\PayrollTest\obj\Debug\PayrollTest.pdb

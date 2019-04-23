@@ -1,0 +1,5 @@
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\payrollSystem\bin\Debug\payrollSystem.exe.config
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\payrollSystem\bin\Debug\payrollSystem.exe
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\payrollSystem\bin\Debug\payrollSystem.pdb
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\payrollSystem\obj\Debug\payrollSystem.exe
+c:\users\xie_x\documents\visual studio 2017\Projects\payrollSystem\payrollSystem\obj\Debug\payrollSystem.pdb
