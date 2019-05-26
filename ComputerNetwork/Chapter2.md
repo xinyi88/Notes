@@ -1,0 +1,20 @@
+# Chapter 2
+- Client-server architecture
+    - always-on host : server
+    - requester: client
+- P2P Architecture
+    - Pears: direct communication between each other
+- Processes: communicate
+    - A program that running with an end system
+    - Exchange message across computer network
+- Service
+    - TCP
+    - UCP
+- Protocal
+    - HTTP
+    - SMTP
+- DNS
+    - Translate hostname to IP address
+    - Host aliasing
+    - Mail server aliasing
+    - Load Distribution
