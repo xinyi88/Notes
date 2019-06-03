@@ -18,3 +18,15 @@
     - Host aliasing
     - Mail server aliasing
     - Load Distribution
+- P2P
+    - BitTorrent
+    - DHT: Distributed Hast Table (a simple database)
+- Video streaming
+    - HTTP streaming 
+    - DASH: Dynamic Adaptive Streaming OVER HTTP
+    - Manifest file: provides a URL for each version along with its bit rate
+    - CDN: content distribution networks
+- Socket Programming
+    - discuss client-server application
+    - with UDP: port number;
+    - with TCP: handshake and establish a TCP connection
