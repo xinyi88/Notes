@@ -1,0 +1,40 @@
+3.1 Introduction and Transport-layer services
+	- Logical communication: it is as if the hosts running the processes were directly connected;
+	- The IP service model is a best-effort delivery service. This means that IP makes its “best effort” to deliver segments between communicating hosts, but it makes no guarantees.
+	- TCP: reliable data transfer, congestion control
+
+3.2 Multiplexing and demultiplexing
+	- Demultiplexing: delivering the data in a transport-layer segment to the correct socket.
+	- Multiplexing: The job of gathering data chunks at the source host from different sockets, encapsulating each data chunk with header information (that will later be
+	used in demultiplexing) to create segments, and assing the segments to the network layer.
+	
+	1. Sockets have unique identifiers
+	2. Segment have speical fields: source port number field, destination port number field
+
+3.3 UDP: connectionless transport
+	- there is no handshaking between sending and receiving transport-layer entities before sending a segment
+	- Cons: Finer application-level control over what data is sent, and when;No connection establishment; No connection state; Small packet header overhead.
+	
+3.4 Principles of Reliable Data Transfer
+	- FSM: finite-state machine
+	- Rdt1.0: perfectly reliable channel
+	- Rdt2.0: channel with bit errors, with ack
+	- Rdt2..1:ack was corrupted
+	- Rdt3.0: a lossy channel with bit errors
+	- SR: selective repeat
+
+3.5 Connection-Oriented Transport: TCP
+	- Handshake
+	- Full-duplex service, point-to-point transfer
+	- Plus, sequence number field, ack field, receive window, header length field, options field, flag field
+	- Doubling the timeout interval, fast retransmit
+	- Flow-control service: congestion control
+
+3.6 Principles of congestion control
+	- Available bit-rate(ABR) services in asynchronous transfer mode (ATM)
+	
+3.7 TCP congestion control
+	- slow start
+	- congestion avoidance
+	- fast recovery
+  - AIMD: additive-increase, multiplicative-descrease
