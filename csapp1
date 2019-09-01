@@ -1,0 +1,5 @@
+It introduces bit and context.  8 bits is a byte. And also 32 bytes or 64 bytes is a word. Compilation system has pre-processor, compiler, assembler, linker steps.  Pre-process translate include # into the programs. Then compiler translate into assembly-language, which is the last language humans can understand. Then assembly phase translate it into machine-language. Finally link other library and make it as executable file.
+Later, it introduces how computer works, like buses, I/O system, main memory, CPU architecture. It also illustrate that the internet is also like a computer which is comparatively a much bigger scope one. Process contains multiple threads.
+Finally, abstraction is very important in the computer world. Virtual memory is an abstraction that provide each process with the illusion that is has exclusive use of the main memory. That means it actually not. Virtually memory separates into several functional one: program code and data, heap, shared libraries, stack, Kernal virtual memory.   
+
+
