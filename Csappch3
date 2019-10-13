@@ -1,0 +1,71 @@
+3.1 Moore‘s law
+现在没用了，世纪牙膏厂Intel正在艰难转行。
+
+3.2 程序编码
+C 预处理， 编译器转换成目标代码，链接器生成可执行代码
+3.2.1 机器级代码
+1. ISA， instruction set architecture 
+X86-64: 程序计数器，整数寄存器，条件码寄存器，向量寄存器
+3.3 数据格式
+char的数据类型，以及大小，后缀
+3.4 访问信息
+通用目的寄存器：存储整数数据和指针，%r开头
+3.4.1 操作数指示符
+操作数 operand，指示出执行一个操作中要使用的源数据值，以及放置结果的目的位置。
+立即数immediate，寄存器register，内存引用
+3.4.2 数据传送指令
+MOV类
+Movb, byte 1
+Movw, word 2
+Movl, 双字 4
+Movq,四字 8
+movabsq， 绝对的四字 ——
+3.4.3 数据传送实例
+MOV如何从内存中读值到寄存器
+指针其实就是地址。
+3.4.4 push and pop stack
+Stack, first in last out. Pushq, popq 
+3.5 算数和逻辑操作
+Add: addb, addw,addl,addq (1,2,4,8)
+3.5.1 load effective address (leaq)
+3.5.2 一元和二元操作 （++，-=）
+3.5.3 移位操作（SAL, SHL, left) (SAR, SHR, right)
+3.5.5 特殊的算数操作
+Imulq, mulq, clto, idivq, divq 
+3.6 控制 loop and switch
+3.6.1 condition code： CF, ZF, SF, OF
+3.6.2 访问条件码 set指令
+3.6.3 跳转指令 jump jmp
+3.6.5 用条件控制来实现条件分支 goto
+3.6.6 用条件传送来实现条件分支
+使用数据的条件转移，然而pipeline使用条件会快
+3.6.7 循环
+do-while， while，for
+3.6.8 switch， multiway branching
+可以使用jump table实现更为高效
+3.7 过程
+软件的一种抽象，可以是method, function,etc
+3.7.1 run time stack, stack frame,
+3.7.2 pc save when function from p to q
+3.7.3 数据传送
+大部分通过寄存器实现
+3.7.4 stack上的局部存储
+当局部数据必须存放在内存中的时候
+3.7.5 寄存器中的局部存储空间
+被调用者保存寄存器，调用者保存寄存器
+3.7.6 recursive - have their private space
+3.8 数组的分配和访问
+3.8.1 基本原则，使用内存引用指令来简化
+3.8.2 指针运算 -  指针作为地址可以加减运算
+3.8.3嵌套的数组 - 分别是两个数组的声明
+3.8.4 定长数组 - 可优化
+3.8.5 变长数组 - ISO C99才引入可以用表达式表示维度
+3.9 struct， union把不同的数据放在一起
+3.9.3 数据对齐，保证是2的k次方，这样只需要访问一次
+3.10 结合起来
+3.10.1 指针 - 从里向外读 - 超级有用！
+谭浩强毁一生。。。
+3.10.2 GDB debugger
+3.11 floating point - simd single instruction multiple data
+其实还有mimd？
+ 
