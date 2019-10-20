@@ -1,0 +1,28 @@
+Memory system
+6.1
+6.1.1 RAM: random access memory
+静态SRAM： 一般只有几兆字节；每个位存储在bistable的存储器单元里
+只要有电，SRAM就会保持不变，不需要刷新。
+动态DRAM： 有几百或几千；每个位存储为对一个电容的充电。
+传统的DRAM： supercell（d个）* DRAM单元（w个）。每个芯片链接到memory controller. 封装在memory module里， 插在主板的扩展槽上
+增强的DRAM：Fast page mode DRAM; Extended Data out DRAM; Synchronous DRAM; Double Data-Rate DRAM; Video DRAM;
+Nonvolatile memory 非易失性存储器：断电后，仍然保存着信息；
+bus transition， read transaction 从主存传送数据到CPU；write transaction则反过来
+
+6.1.2 磁盘存储
+platter组成磁盘：surface，spindle（rotational rate）
+disk磁盘，ssd是没有移动部分的
+recording diversity, track density, areal density 决定磁盘容量
+磁盘操作：read/write head, need seek
+时间：seek time, rotational latency, transfer time
+I/O 设备， 通过PCI总线： USB, 图形卡，主机总线适配器
+
+6.2 locality 局部性
+temporal locality, spatial locality 
+Using locality to reduce running time
+
+6.3 Memory hierarchy: L0 to L6
+缓存命中，不命中，
+
+
+
