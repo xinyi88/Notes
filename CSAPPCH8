@@ -1,0 +1,26 @@
+ECF：exceptional control flow 异常控制流
+硬件层/操作系统层/应用层
+
+Exception table, exception handler
+	1. Return to current event
+	2. Return to next event
+	3. 终止被中断的程序
+
+Types: Interrupt, trap, fault, abort 并讲述了原因
+Interrupt 	I/o 	Async 	Return next
+Trap	有意的异常	Sync	Return next
+Fault	潜在可恢复的错误	Sync	return current possible
+Abort	不可恢复的错误	Sync	no return
+
+process 进程
+- 一个独立的逻辑控制流
+- 一个私有的地址空间
+-有自己的唯一的整数ID，PID
+
+Concurrency, multiple flow
+Multitasking, multiple process
+Parallel flow, if running parallel and parallel execution
+
+Context switch: os use for ECF
+
+信号：一条小消息，通知进程发生了一个某种类型的事件
