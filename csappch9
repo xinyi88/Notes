@@ -1,1 +1,33 @@
-created first
+物理和虚拟寻址
+Physical address 使用物理地址
+地址空间
+address space: non negative integer
+虚拟内存作为缓存的工具
+VM -> VP (virtual page) 
+PP (physical page): page frame 
+	1. 未分配的
+	2. 缓存的
+	3. 未缓存的
+	
+虚拟内存作为内存管理的工具
+1. 简化链接
+2. 简化加载
+3. 简化共享
+
+虚拟内存作为内存保护的工具
+
+地址翻译
+结合高速缓存和虚拟内存
+使用TLB加速地址翻译
+
+内存映射
+Linux系统中的普通文件
+匿名文件
+
+动态内存分配
+Malloc & free
+链表相关
+
+
+垃圾收集
+mark & sweep
