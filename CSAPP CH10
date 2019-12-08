@@ -1,0 +1,24 @@
+文件： 所有的I/O设备都是文件。都可以输入输出标准表示。
+类型： 普通文件regular file， 目录directory，socket（跨网络通信的文件）
+pathname： absolute pathname start with /
+relative pathname start with file name
+
+open： to open a file
+read/write：to read/write a file
+
+Robust I/O
+no cache 输入输出函数
+with cache 输入函数
+
+
+stat 和fstat函数，检索metadata 
+Readdir 读取目录的内容
+
+共享文件
+description table
+file table
+v-node table
+
+i/o redirect
+可将磁盘文件和标准输入输出联系起来 
+
