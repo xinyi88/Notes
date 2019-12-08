@@ -1,0 +1,16 @@
+Client-server model
+Ipv4 32 bit
+ipv6 128 bit
+
+域名层次结构，通过dns来维护（host entry structure）
+Socket interface是一组函数，通过和i/o函数结合起来，用以创建网络应用
+主机和服务的转换
+Getaddrinfo
+Getnameinfo
+
+socket interface function
+Open_clientfd
+Open_listenfd
+
+Web服务器
+CGI common gateway interface
