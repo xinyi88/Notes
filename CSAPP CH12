@@ -1,0 +1,30 @@
+Concurrency的应用
+1. 访问慢速i/o
+2.interact with human
+3.推迟工作已降低延迟
+4.服务多个网络客户端
+5.在多核机器上进行并行计算
+6.进程
+7.i/o多路复用
+
+基于进程的并发编程
+fork， exec， waitpid
+
+基于i/o多路复用的并发编程 （multiplexing）
+使用state machine， 用于event-driven
+
+基于thread的并发编程
+
+多thread的share parameter
+容易引起sync error
+
+semaphore 信号量来处理
+
+classical 生产-消费问题
+
+thread safety！！！
+1.不保护共享变量的函数
+2.保持跨越多个调用的状态的函数
+3.return 指向静态变量的指针的函数
+
+reentrant function（thread safe）
