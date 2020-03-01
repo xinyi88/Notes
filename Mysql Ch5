@@ -1,1 +1,26 @@
 
+B-Tree indexes
+The general idea of a B-Tree is that all the values are stored in order, and each leaf page is the same distance from the root. 
+
+   key(last_name, first_name, dob)
+
+-----
+Match the full value: find a person named Cuba Allen who was born on 1960-01-01.
+Match a leftmost prefix: find all people with the last name Allen. This uses only the first column in the index.
+Match a column prefix: find all people whose last names begin with J. This uses only the first column in the index.
+Match a range of values: find people whose last names are between Allen and Barrymore. This also uses only the first column.
+Match one part exactly and match a range on another part: find everyone whose last name is Allen and whose first name starts with the letter K (Kim, Karl, etc.). This is an exact match on last_name and a range query on first_name.
+Index-only queries: B-Tree indexes can normally support index-only queries, which are queries that access only the index, not the row storage. We discuss this optimization in Covering Indexes.
+----------
+not start from the leftmost side of the indexed columns. 
+You can’t skip columns in the index. last name with born date
+can’t optimize accesses with any columns to the right of the first range condition.  WHERE last_name="Smith" AND first_name LIKE 'J%' AND dob='1976-12-23'
+-----------
+Indexes reduce the amount of data the server has to examine.
+Indexes help the server avoid sorting and temporary tables.
+Indexes turn random I/O into sequential I/O.
+
+------------
+Isolating the Column: make where condition simple 
+wrong: 
+mysql> SELECT ... WHERE TO_DAYS(CURRENT_DATE) - TO_DAYS(date_col) <= 10;
