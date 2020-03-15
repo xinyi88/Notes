@@ -24,3 +24,15 @@ Indexes turn random I/O into sequential I/O.
 Isolating the Column: make where condition simple 
 wrong: 
 mysql> SELECT ... WHERE TO_DAYS(CURRENT_DATE) - TO_DAYS(date_col) <= 10;
+
+------------
+1. indexing the first few characters instead of the whole value
+2. “create indexes on columns that appear in the WHERE clause.” This advice is very wrong. Use index merge strategy 
+3. Choosing a Good Column Order:  place the most selective columns first in the index 
+4. clustered index, its rows are actually stored in the index’s leaf pages. This is primary key. Cons and pros can be found in the book
+5. Covering index "EXPLAIN", this should be only in MySql
+6. use index scan for sort
+---------------
+1. Single-row access is slow, especially on spindle-based storage. (Solid-state disks are faster at random I/O, but this point remains true.) If the server reads a block of data from storage and then accesses only one row in it, it wastes a lot of work. It’s much better to read in a block that contains lots of rows you need. Use indexes to create locality of reference for improved efficiency.
+2. Accessing ranges of rows in order is fast, for two reasons. First, sequential I/O doesn’t require disk seeks, so it is faster than random I/O, especially on spindle-based storage. Secondly, if the server can read the data in the order you need it, it doesn’t need to perform any follow-up work to sort it, and GROUP BY queries don’t need to sort and group rows together to compute aggregates over them.
+3. Index-only access is fast. If an index contains all the columns that the query needs, the storage engine doesn’t need to find the other columns by looking up rows in the table. This avoids lots of single-row access, which as we know from point 1 above is slow.
