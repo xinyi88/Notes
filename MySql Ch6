@@ -1,1 +1,7 @@
+Query performance optimization
 
+Typical mistake
+1. Fetching more rows than needed
+2. Fetching all columns from a multitable join
+3. Fetching all columns
+4. Fetching the same data repeatedly
