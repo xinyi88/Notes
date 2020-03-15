@@ -5,3 +5,53 @@ Typical mistake
 2. Fetching all columns from a multitable join
 3. Fetching all columns
 4. Fetching the same data repeatedly
+
+-----------
+1. ask database for those you don't need
+2. MySql exam too much data
+------------
+Restructure queries
+1. complex queries vs many queries: doing more work with fewer queries is prefer (not for MySql!)
+chopping up a query
+join decomposition
+-------------
+Query execution basics
+The client sends the SQL statement to the server.
+The server checks the query cache. If there’s a hit, it returns the stored result from the cache; otherwise, it passes the SQL statement to the next step.
+The server parses, preprocesses, and optimizes the SQL into a query execution plan.
+The query execution engine executes the plan by making calls to the storage engine API.
+The server sends the result to the client.
+----------------
+1.优化COUNT()查询
+
+* COUNT()是一个特殊的函数，有两种非常不同的作用：可以统计某个列值的数量，也可以统计行数，在统计列值时要求列值是非空的（不统计NULL）
+
+* COUNT(*)并不是会像我们猜想的那样扩展成所有的列，实际上，它会忽略所有的列而直接统计所有的行数，当MySQL确认括号内的表达值不可能为空时，实际上就是在统计行数
+
+* MyISAM的COUNT()函数只有没有任何WHERE条件下的COUNT(*)才非常快
+
+* 使用近似值，如EXPLAIN出来的优化器估算行数
+
+* 使用索引覆盖
+
+* 使用汇总表
+
+* 使用外部缓存系统
+
+2.优化关联查询
+
+* 确保ON或者USING子句中的列上有索引
+
+* 确保任何的GROUP BY和ORDER BY中的表达式只涉及到一个表中的列
+
+* 当升级MySQL的时候需要注意：关联语法、运算符优先级等其他可能会发生变化的地方
+
+3.优化子查询：尽可能使用关联查询代替，如果使用MySQL5.6以上或MariaDB则可以忽略这个建议
+
+4.优化GROUP BY和DISTINCT
+
+5.优化LIMIT分页
+
+6.优化UNION查询
+
+
