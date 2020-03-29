@@ -1,1 +1,43 @@
+Replication
+
+	- Statement-based replication (logical)
+		Statement-based replication works by recording the query that changed the data on the master. When the replica reads the event from the relay log and executes it, it is reexecuting the actual SQL query that the master executed.
+		
+		
+	- Row-based replication
+		 records the actual data changes in the binary log and is more similar to how most other database products implement replication.
+
+Usage of replication
+	- Data distribution
+	- Load balancing
+	- Backups
+	- High availability and failover
+	- Testing MySQL upgrades
+
+How it works
+1. The master records changes to its data in its binary log. (These records are called binary log events.)
+2. The replica copies the master’s binary log events to its relay log.
+3. The replica replays the events in the relay log, applying the changes to its own data.
+
+
+
+Files:
+	- mysql-bin.indez
+	- mysql-relay-bin.index
+	- Master.info
+	- Relay-log.info
+
+
+	
+Replication filter:
+Much less a good thing than you might think (lol)
+
+Master-Master in Active-Active Mode: maybe for geographically separated office
+Master-Master in Active-Passive Mode: passive one is read-only
+Master-Master with Replicas: two Master has replica
+Ring Replication: three Master in circular replication
+Master, Distribution Master, and Replicas: A distribution master is a replica whose only purpose is to read and serve the binary logs from the master
+
+Master-Master: dual master, bidirectional replication
+
 
