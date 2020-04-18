@@ -1,1 +1,51 @@
+1:09 PM
+
+Scaling MySQL
+	- Performance
+	- Capacity: how to handle load
+		○ Quantity of data
+		○ Number of users
+		○ User activity
+		○ Size of related datasets
+	- Scalability
+		○ Scaling up:
+		buying more powerful hardware
+		○ Scaling out
+		○ Scaling by consolidation
+		○ Scaling by clustering
+		○ Scaling back
+
+	- Scaling out
+		○ Functional partitioning
+		○ Data sharding
+		○ Choosing a partitioning key
+		○ Multiple partitioning keys
+		○ Querying across shards
+		○ Allocating data, shards, and nodes
+		○ Arranging shards on nodes
+		○ Fixed allocation
+		○ Dynamic allocation
+		○ Mixing dynamic and fixed allocation
+		○ Explicit allocation
+		○ Rebalancing shards
+		○ Generating globally unique Ids
+		○ Tools for sharding
+			○ Connecting to the correct shard and querying it
+			○ Distributed consistency checks
+			○ Aggregating results across shards
+			○ Cross-shard joins
+			○ Locking and transaction management
+			○ Creating shards (or at least discovering new shards on the fly) and rebalancing shards if you have time to implement this
+
+Load balancing
+Scalability
+	Load balancing can help with certain kinds of scalability strategies, such as read-write splitting to read from replicas.
+Efficiency
+	Load balancing helps you use resources more efficiently because you have control over how requests are routed. This is particularly important if your servers aren’t all equally powerful: you can direct more work to the more powerful machines.
+Availability
+	A smart load-balancing solution uses the servers that are available at each moment.
+Transparency
+	Clients don’t need to know about the load-balancing setup. They don’t have to care about how many machines are behind the load balancer, or what their names are; the load balancer lets the clients see a single virtual server.
+Consistency
+	If your application is stateful (database transactions, website sessions, etc.), the load balancer should direct related requests to a single server so that the state isn’t lost between requests. This relieves the application of having to keep track of which server it’s connected to.
 
