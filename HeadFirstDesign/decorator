@@ -1,0 +1,70 @@
+public abstract class Beverage
+{
+    protected String description = "Unknown Beverage";
+    public abstract double cost();
+    public String getDescription()
+    {
+        return description;
+    }
+}
+
+public abstract class CondimentDecorator : Beverage
+{
+    public abstract String getDescription();
+}
+
+public class DarkRoast : Beverage
+{
+    public DarkRoast()
+    {
+        description = "DarkRoast";
+    }
+
+    public override double cost()
+    {
+        return .99;
+    }
+}
+
+public class Decaf : Beverage
+{
+
+    public Decaf()
+    {
+        this.description = "Decaf";
+    }
+
+    public override double cost()
+    {
+        return 1.05;
+    }
+}
+
+public class Mocha : CondimentDecorator
+{
+    private Beverage beverage;
+
+    public Mocha(Beverage beverage)
+    {
+        this.beverage = beverage;
+    }
+
+    public override double cost()
+    {
+        return 8 + beverage.cost();
+    }
+
+    public override String getDescription()
+    {
+        return beverage.getDescription() + ",Mocha";
+    }
+}
+
+
+public static void Main()
+{
+    var b = new DarkRoast();
+    var c = new Mocha(b);
+    Console.WriteLine(c.getDescription());
+    Console.WriteLine(c.cost());
+}
